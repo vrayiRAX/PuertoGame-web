@@ -60,7 +60,7 @@ img {
 
 /* seccion hero  */
 .hero {
-    background: url('assets/img/6bca8ac307eaf0de563d3026f01ac2403a352242.png') center/cover no-repeat;
+    background: url('/assets/img/6bca8ac307eaf0de563d3026f01ac2403a352242.png') center/cover no-repeat;
     text-align: center;
     padding: 150px 20px;
     display: flex;
@@ -368,7 +368,7 @@ img {
 .contact {
     padding: 40px 20px;
     text-align: center;
-    background: url('assets/img/fondo_contacto_2.jpg') center/cover no-repeat;
+    background: url('/assets/img/fondo_contacto_2.jpg') center/cover no-repeat;
     color: white;
 }
 
