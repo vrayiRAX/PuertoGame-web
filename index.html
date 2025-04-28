@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuertoGames - Inicio</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navegacion -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">PuertoGames</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="producto.html">Producto</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- seccion hero -->
+    <section class="hero">
+        <h1>Bienvenido a tu tienda de videojuegos</h1>
+        <p>Encuentra los últimos lanzamientos y tus juegos favoritos.</p>
+        <a href="contacto.html" class="cta-button">Contactanos</a>
+    </section>
+    <!--seccion noticias-->
+    <section class="news-slider">
+        <div class="slide active">
+          <img src="/assets/img/NOTICIA 1.webp" alt="Noticia 1">
+          <div class="overlay-text">
+            <h3>En Cyberpunk 2077 hay un boton que te pide que no lo pulses... y claro que lo vas a pulsar</h3>
+            <p>Night City, la ciudad donde tiene lugar Cyberpunk 2077, esconde muchos secretos uno de ellos es un boton con una advertencia que por supuesto vas a ignorar.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="/assets/img/noticia 2.webp" alt="Noticia 2">
+          <div class="overlay-text">
+            <h3>Este juego es tan aterrador colo Little Nightmares pero con cooperativo y gratuito</h3>
+            <p>Double Shoulders es un juego creado por unos estudiantes y puede disfrutarse en pc sin pagar absolutamente nada por el, y eso que parece mejor que mas de un juego de un par de euros</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="/assets/img/noticia 3.webp" alt="Noticia 3">
+          <div class="overlay-text">
+            <h3>Ha causado un daño irreparable a la industria del videojuego: Fundador de New Blood critica Escape from tarkov</h3>
+            <p>Tarkov esta teniendo un impacto negativo para la industria del videojuego asegura el fundador de New Blood: esta creando una tendencia que incluso afecta al nuevo juego de FromSoftware</p>
+          </div>
+        </div>
+      </section>
+    
+
+    
+    <!--seccion destacada-->
+    <section class="featured-games">
+        <h2>Juegos Destacados</h2>
+        <div class="featured-container">
+          <div class="featured-card">
+            <img src="/assets/img/minecraft.jpg" alt="Minecraft (9.75)">
+            <h3>Minecraft (9.75)</h3>
+          </div>
+          <div class="featured-card">
+            <img src="/assets/img/ELDEN RING.jpg" alt="ELDEN RING (9.67)">
+            <h3>ELDEN RING (9.67)</h3>
+          </div>
+          <div class="featured-card">
+            <img src="/assets/img/RED DEAD REDEMPTION 2.jpg" alt="Red Dead Redemption 2 (9.67)">
+            <h3>Red Dead Redemption 2 (9.67)</h3>
+          </div>
+        </div>
+    </section>
+    
+      <!-- seccion categoria -->
+    <section class="categories">
+        <h2>Categorías de Videojuegos</h2>
+        <div class="category-container">
+            <a href="producto.html?categoria=accion" class="boton-categoria">Acción
+                <img src="/assets/img/accion categoria.jpg" alt="Acción">
+                <h3>Acción</h3>
+            </a>
+            <a href="producto.html?categoria=aventura" class="boton-categoria">Aventura
+                <img src="/assets/img/selda aventura.jpeg" alt="Aventura">
+                <h3>Aventura</h3>
+            </a>
+            <a href="producto.html?categoria=deporte" class="boton-categoria">Deportes
+                <img src="/assets/img/deporte categoria.jpeg" alt="Deportes">
+                <h3>Deportes</h3>
+            </a>
+        </div>
+    </section>
+      
+      
+
+    <!-- pie de pagina  -->
+    <footer>
+        <p>PuertoGames - Puerto Montt, Chile</p>
+        <p>Email: contacto@puertogames.cl | Tel: +56 9 1234 5678</p>
+    </footer>
+    <!--apartado para la transsicion de los anuncios-->
+    <script>
+        const slides = document.querySelectorAll('.news-slider .slide');
+        let currentSlide = 0;
+        const slideInterval = 5000; // 5 segundos
+      
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+          });
+        }
+      
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+      
+        setInterval(nextSlide, slideInterval);
+      </script>
+      
+</body>
+</html>

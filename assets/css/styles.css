@@ -1,0 +1,553 @@
+/* Restablecer y estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #171a21;
+    color: #c7d5e0;
+    scroll-behavior: smooth;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+
+/* variables */
+:root {
+    --accent-color: #66c0f4;
+}
+
+/* navegacion  */
+.navbar {
+    background-color: #1b2838;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--accent-color);
+    font-size: 1.8em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #c7d5e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+}
+
+/* seccion hero  */
+.hero {
+    background: url('/assets/img/6bca8ac307eaf0de563d3026f01ac2403a352242.png') center/cover no-repeat;
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+
+.hero-image {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: #171a21;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #4682b4;
+    transform: translateY(-2px);
+}
+
+/* seccion de las categorias  */
+.categories {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para los enlaces de categoría */
+.boton-categoria {
+    background-color: #2a475e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: #c7d5e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.boton-categoria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.boton-categoria h3 {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.boton-categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/*seccion destacada*/
+.featured-games {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1b2838;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
+  }
+  
+  .featured-games h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+  }
+  
+  .featured-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .featured-card {
+    background-color: #2a475e;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    color: #c7d5e0;
+  }
+  
+  .featured-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .featured-card:hover {
+    transform: translateY(-5px);
+  }
+/*seccion noticias*/
+.news-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  }
+  
+  .news-slider .slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .news-slider .slide.active {
+    position: relative;
+    opacity: 1;
+  }
+  
+  .news-slider img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 70%;
+  }
+  
+  .overlay-text h3 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+  }
+  
+  .overlay-text p {
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+  
+  
+
+
+/* seccion de productos */
+.products {
+    padding: 40px 20px;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.products h3 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    color: var(--accent-color);
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #2a475e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border: 5px solid #027fc8; 
+    border-radius: 10px; 
+}
+
+
+.product-card h3 {
+    font-size: 1.2em;
+    padding: 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.product-card .cta-button {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* seccion de los datelles de los juegos */
+.game-details {
+    margin: 20px auto;
+    max-width: 800px;
+    background: linear-gradient(135deg, #1b2838, #2a475e);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.product-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.product-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.product-content img:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h3 {
+    font-size: 1.8em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #d2dae2;
+}
+
+.product-info p strong {
+    color: var(--accent-color);
+}
+
+.product-info .cta-button {
+    margin-right: 10px;
+    padding: 8px 16px;
+}
+
+.product-info .cta-button:hover {
+    background-color: #4682b4;
+    transform: scale(1.05);
+}
+
+/* seccion de los contactos */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+    background: url('/assets/img/fondo_contacto_2.jpg') center/cover no-repeat;
+    color: white;
+}
+
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #2a475e;
+    border-radius: 5px;
+    background-color: #1b2838;
+    color: #c7d5e0;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    align-self: center;
+}
+
+/* Animación de aparición gradual*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pie de página */
+footer {
+    background-color: #1b2838;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero {
+      padding: 40px 10px;
+    }
+  
+    .hero-image {
+      width: 100%;
+      max-width: 600px;
+    }
+  
+    .categories h2,
+    .products h2,
+    .contact h2 {
+      font-size: 1.8em;
+    }
+  
+    .boton-categoria,
+    .product-card {
+      width: 150px;
+    }
+  
+    .boton-categoria img {
+      height: 100px;
+    }
+  
+    .product-card img {
+      height: 120px;
+    }
+  
+    .products h3 {
+      font-size: 1.3em;
+    }
+  
+    .game-details {
+      padding: 15px;
+    }
+  
+    .product-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .product-content img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .product-info h3 {
+      font-size: 1.5em;
+    }
+  
+    .product-info p {
+      font-size: 1em;
+    }
+  
+    .contact-form {
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      padding: 30px 10px;
+    }
+  
+    .hero-image {
+      max-width: 100%;
+    }
+  
+    .categories h2,
+    .products h2,
+    .contact h2 {
+      font-size: 1.5em;
+    }
+  
+    .boton-categoria,
+    .product-card {
+      width: 120px;
+    }
+  
+    .boton-categoria h3,
+    .product-card h3 {
+      font-size: 1em;
+    }
+  
+    .product-card p {
+      font-size: 0.9em;
+    }
+  
+    .products h3 {
+      font-size: 1.2em;
+    }
+  
+    .game-details {
+      padding: 10px;
+    }
+  
+    .product-info h3 {
+      font-size: 1.3em;
+    }
+  
+    .product-info p {
+      font-size: 0.9em;
+    }
+  
+    .product-info .cta-button {
+      padding: 6px 12px;
+      font-size: 0.9em;
+    }
+  }
+  
