@@ -70,6 +70,8 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  text-align: center;
+  color: white;
 }
 
 .hero-bg {
@@ -85,11 +87,7 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  color: #fff;
-  text-align: center;
-  width: 100%;
   max-width: 800px;
-  margin: 0 auto;
   padding: 40px 20px;
 }
 
@@ -100,8 +98,9 @@ img {
 
 .hero-content p {
   font-size: 1.2em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
+
 
 .cta-button {
   background-color: var(--accent-color);
